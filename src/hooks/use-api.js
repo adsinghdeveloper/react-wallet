@@ -17,7 +17,8 @@ const useApi = () => {
       headers: {
           "Accept": "application/json",
           "Content-Type": "application/json;charset=UTF-8",
-          "Authorization": request.url === 'profile'? `${request.token_type} ${request.token}` : `${accessTokenData.type} ${accessTokenData.token}`
+          "Authorization": request.token? `${request.token_type} ${request.token}` : `${accessTokenData.type} ${accessTokenData.token}`
+          // "Authorization": `${accessTokenData.type} ${accessTokenData.token}`
         }
     };
 

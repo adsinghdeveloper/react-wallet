@@ -116,9 +116,10 @@ const Register = () => {
         name: formState.name.value,
         email: formState.email.value,
         password: formState.password.value,
+        password_confirmation: formState.cpassword.value,
       };
       registerRequest(
-        { url: "register", type: "post", params: regData },
+        { url: "register", method: "post", params: regData },
         (response) => {
           if (
             response.hasOwnProperty("user") &&
