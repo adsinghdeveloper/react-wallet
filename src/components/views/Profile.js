@@ -134,7 +134,7 @@ const Profile = (props) => {
         conf_psw: formState.confirm_password.value,
       };
       profileUpdateRequest({
-        method: 'patch',
+        method: 'post',
         url: 'save_profile',
         params: profileData
       }, (response) => {
